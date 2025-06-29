@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  transition: background 1.5s ease-in-out;
+  padding: 20px;
+  place-items: center;
+}
+
+.weather-container {
+  position: relative;
+  z-index: 2;
+  padding: 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  height: 44px;
+  width: 100%;
+  padding: 0 16px;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.locfav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.current-favorite {
+  flex: 1;
+  padding: 0px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.current-favorite:hover {
+  transform: scale(1.02);
+}
+
+.weather-icon {
+  width: 100px;
+  margin: 20px 0 6px;
+}
+
+.weather-type {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 6px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.temperature {
+  font-size: 44px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.location {
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.weather-data {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  color: white;
+}
+
+.weather-data .col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  flex: 1;
+}
+
+.weather-data .col img {
+  width: 20px;
+  margin-top: 4px;
+}
+
+.weather-data .col span {
+  font-size: 12px;
+  opacity: 0.8;
+  display: block;
+}
+
+.favorites-container {
+  margin: 20px auto 0;
+  padding: 16px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: left;
+}
+
+.favorites-container h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.favorites-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorites-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.favorites-container li:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.favorites-container li span {
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.favorites-container button {
+  background: none;
+  border: none;
+  color: #ff7f7f;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.favorites-container button:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+  .weather-container {
+    padding: 20px;
+  }
+
+  .temperature {
+    font-size: 36px;
+  }
+
+  .location {
+    font-size: 18px;
+  }
+
+  .weather-data {
+    gap: 6px;
+  }
+
+  .weather-data .col {
+    font-size: 13px;
+  }
+
+  .weather-data .col span {
+    font-size: 11px;
+  }
+
+  .locfav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .current-favorite {
+    width: 100%;
+  }
+}
